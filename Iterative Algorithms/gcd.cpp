@@ -4,11 +4,23 @@ using namespace std;
 
 
 int gcd(int a, int b, int &steps){
-    steps++;
-    if(b == 0)
-    return a;
+    int temp;
+    if(a==0){
+        return b;
+    }
+    else if(b==0){
+        return a;
+    }
+    else {
+        while(b!=0){
+            steps++;
+            temp= a%b;
+            a=b;
+            b=temp;
+        }
+    }
 
-    return gcd(b, a%b, steps);
+    return a;
 }
 
 

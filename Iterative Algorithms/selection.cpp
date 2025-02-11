@@ -13,6 +13,7 @@ int selectionSort(int arr[], int n, int &steps){
         }
         swap(arr[i], arr[min]);
     }
+    return 0;
 }
 int main(){
     int n;

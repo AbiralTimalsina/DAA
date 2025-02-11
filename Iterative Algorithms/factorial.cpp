@@ -3,10 +3,17 @@ using namespace std;
 
 int factorial(int n, int &steps){
     steps++;
-    if(n==0){
+    int facto=1;
+    if(n==0 || n==1){
         return 1;
     }
-    return n*factorial(n-1, steps);
+    else{
+        for(int i=1;i<=n;i++){
+            steps++;
+            facto*=i;
+        }
+        return facto;
+    }
 }
 int main(){
     int n;
